@@ -4,6 +4,7 @@ const app = express();
 const port = 4000;
 
 app.get("/health", (req: Request, res: Response)=>{
+    console.log("health");
     return res.send("ok");
 })
 
