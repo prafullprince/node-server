@@ -1,10 +1,10 @@
-import express from "express";
+import express, { type Request, type Response } from "express";
 
 const app = express();
 const port = 4000;
 
-app.get("/health", ()=>{
-    console.log("ok");
+app.get("/health", (req: Request, res: Response)=>{
+    return res.send("ok");
 })
 
 app.listen(port, () => {
